@@ -1,9 +1,5 @@
 {
   "dependencies": {
     "jszip": "^3.10.1"
-  },
-  "devDependencies": {
-    "harp": "^0.46.1",
-    "less": "^4.1.3"
   }
 }
