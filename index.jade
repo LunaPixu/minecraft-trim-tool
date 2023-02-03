@@ -1,0 +1,42 @@
+html
+  head
+    link(rel="stylesheet", href="style.css")
+    title Minecraft Trim Generator
+  body
+    div(style="box-shadow: 0 5px 5px rgb(117, 117, 207);")
+      #title-bar
+        h1 Luna Pixu's Minecraft Trim Generator
+      #link-bar
+        h3
+          | Twitter:&nbsp;
+          a(href="https://twitter.com/luna_pixu") @Luna_Pixu
+          | , Github:&nbsp;
+          a(href="https://github.com/lunapixu") LunaPixu
+    #desc-text
+      p
+        | This is a really crude Minecraft tool for generating simple armor trim materials for the upcoming Minecraft Java Edition update 1.20 (or the upcoming 1.19.4 via experimental datapacks).
+        br
+        | Simply input the name of your trim material (and its corresponding item), pick a color for the item tooltip, and specify the model index. Once done, you&apos;ll be given a basic resource pack and data pack combination.
+      p
+        i
+          | Note: You will have to edit your packs further in order for them to work fully. e.g. I don&apos;t support adding the trim palette texture or palette overrides (like diamond trim on diamond armor).
+          br
+          | This tool exists just so you don&apos;t have to constantly copy-paste a ton of .json files.
+
+    form#controls-box
+      p(style="margin-top: 0px")
+        label(for="trim-material") Trim Material (namespace optional)
+        br
+        input#trim-material(type="text", placeholder="namespace:item_name")
+        br
+        label(for="rgb-tooltip") Color of armor tooltip
+        br
+        input#rgb-tooltip(type="color")
+        br
+        label(for="model-index") Model Index
+        br
+        input#model-index(type="number", value="0.50", step="0.1")
+      input#submit-button(type="button", value="Submit")
+      input(type="reset")
+    
+    script(src="js/main.js")
